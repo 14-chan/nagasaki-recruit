@@ -1,0 +1,7 @@
+@use "../../foundations/var" as *;
+
+.g-header {
+    width: 30%;
+    font-family: var(--font-kaku);
+    color: var(--color-white);
+}

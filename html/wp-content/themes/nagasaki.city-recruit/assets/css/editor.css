@@ -32,11 +32,8 @@
 }
 
 :root {
-  --font-main: "Noto Sans JP", sans-serif;
-  --font-en: "Stick No Bills", sans-serif;
-  --font-point: "Noto Sans JP", sans-serif;
-  --font-point02: "Noto Sans JP", sans-serif;
-  --font-outfit: "Outfit", sans-serif;
+  --font-kaku: "Zen Kaku Gothic New";
+  --font-maru: "Zen Maru Gothic" ;
 }
 
 :root {

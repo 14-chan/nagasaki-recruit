@@ -1,0 +1,90 @@
+@use "../../foundations/var" as *;
+
+.c-header__ttl {
+    font-size: 1.8rem;
+    background: url(../img/header-star.svg) no-repeat;
+    margin-left: 3rem;
+    padding-left: 5rem;
+    line-height: 3;
+}
+
+.c-header__list {
+    margin-top: 30rem;
+    font-size: 1.4rem;
+}
+
+.c-header__list__item {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 3.5rem;
+
+    &:not(:nth-child(1)) {
+        border-top: 1px solid;
+        border-color: #d9d9d9;
+    }
+}
+
+.include-accordion ul {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: .5s;
+    background-color: #f9f9f9;
+    margin: 0;
+}
+
+.include-accordion li li {
+    border-bottom: 1px dotted #d9d9d9;
+    padding: 1rem 0 1rem 1rem;
+    margin-left: 1.5rem;
+}
+
+button {
+    position: relative;
+    border: none;
+    width: 100%;
+    background-color: inherit;
+    color: var(--color-white);
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+button:hover {
+    background-color: #f9f9f9;
+}
+
+button::before,
+button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: .15rem;
+    height: .8rem;
+    background-color: #d9d9d9;
+    transform: .5s;
+}
+
+button::before {
+    transform: translateY(-50%) rotate(-45deg);
+    right: 35px;
+  }
+
+button::after {
+    transform: translateY(-50%) rotate(45deg);
+    right: 30px;
+}
+
+li.active button::before {
+    transform: translateY(-50%) rotate(-135deg);
+    transition:.5s;
+}
+
+li.active button::after {
+    transform: translateY(-50%) rotate(135deg);
+    transition:.5s;
+}
+
+ul.active{ overflow-y: auto;}
+
+}
