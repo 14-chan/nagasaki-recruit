@@ -8,6 +8,7 @@
 <?php wp_head(); ?>
 </head>
 <body class="l-pagebody">
+    <div class="g-mv">
     <!--ヘッダ-->
     <header class="g-header">
         <h1 class="c-header__ttl">長崎市職員採用サイト</h1>

@@ -482,11 +482,6 @@ mixins
   font-size: 1.4rem;
 }
 
-.c-header__list__item {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding-left: 3.5rem;
-}
 .c-header__list__item:not(:nth-child(1)) {
   border-top: 1px solid;
   border-color: #d9d9d9;
@@ -496,15 +491,25 @@ mixins
   height: 0;
   padding: 0;
   overflow: hidden;
-  transition: 0.5s;
-  background-color: #f9f9f9;
-  margin: 0;
+  transition: height 0.5s ease, padding 0.3s ease;
+  margin-left: 1.5rem;
+}
+
+.include-accordion ul li {
+  transition: opacity 0.3s ease;
 }
 
 .include-accordion li li {
   border-bottom: 1px dotted #d9d9d9;
-  padding: 1rem 0 1rem 1rem;
-  margin-left: 1.5rem;
+  padding: 2rem 0 2rem 3.7rem;
+  cursor: pointer;
+}
+.include-accordion li li:nth-child(1) {
+  border-top: 1px dotted;
+}
+
+.include-accordion li li:hover {
+  background-color: #000080;
 }
 
 button {
@@ -514,12 +519,56 @@ button {
   background-color: inherit;
   color: var(--color-white);
   cursor: pointer;
+  padding: 2rem 0 2rem 3.5rem;
   text-align: left;
   font-size: 1.4rem;
+}
+
+button:hover {
+  background-color: #000080;
+}
+
+button::before,
+button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0.15rem;
+  height: 0.8rem;
+  background-color: #d9d9d9;
+  transform: 0.5s;
+}
+
+button::before {
+  transform: translateY(-50%) rotate(-45deg);
+  right: 35px;
+}
+
+button::after {
+  transform: translateY(-50%) rotate(45deg);
+  right: 30px;
+}
+
+li.active button::before {
+  transform: translateY(-50%) rotate(-135deg);
+  transition: 0.5s;
+}
+
+li.active button::after {
+  transform: translateY(-50%) rotate(135deg);
+  transition: 0.5s;
+}
+
+ul.active {
+  overflow-y: auto;
 }
 
 .g-header {
   width: 30%;
   font-family: var(--font-kaku);
   color: var(--color-white);
+}
+
+.g-mv {
+  display: flex;
 }

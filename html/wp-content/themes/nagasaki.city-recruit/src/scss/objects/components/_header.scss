@@ -14,9 +14,6 @@
 }
 
 .c-header__list__item {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 3.5rem;
 
     &:not(:nth-child(1)) {
         border-top: 1px solid;
@@ -28,15 +25,25 @@
     height: 0;
     padding: 0;
     overflow: hidden;
-    transition: .5s;
-    background-color: #f9f9f9;
-    margin: 0;
+    transition: height 0.5s ease, padding 0.3s ease;
+    margin-left: 1.5rem;
+}
+
+.include-accordion ul li {
+    transition: opacity 0.3s ease;
 }
 
 .include-accordion li li {
     border-bottom: 1px dotted #d9d9d9;
-    padding: 1rem 0 1rem 1rem;
-    margin-left: 1.5rem;
+    padding: 2rem 0 2rem 3.7rem;
+    cursor: pointer;
+
+    &:nth-child(1) {
+        border-top: 1px dotted;
+    }
+}
+.include-accordion li li:hover {
+    background-color: #000080;
 }
 
 button {
@@ -46,12 +53,13 @@ button {
     background-color: inherit;
     color: var(--color-white);
     cursor: pointer;
+    padding: 2rem 0 2rem 3.5rem;
     text-align: left;
     font-size: 1.4rem;
 }
 
 button:hover {
-    background-color: #f9f9f9;
+    background-color: #000080;
 }
 
 button::before,
@@ -86,5 +94,3 @@ li.active button::after {
 }
 
 ul.active{ overflow-y: auto;}
-
-}
